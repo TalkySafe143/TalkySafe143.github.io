@@ -10,7 +10,7 @@ export default function Header() {
                 <a href="https://www.linkedin.com/in/talkysafe143/" target="_blank" className="fab fa-linkedin-in" id="profile-link"></a>
                 <a href="https://github.com/TalkySafe143" target="_blank" className="fab fa-github"></a>
             </div>
-            <a href="/en.pdf" className="cta" download>DownIoad CV</a>
+            <a href="/en.pdf" className="cta" download>Download CV</a>
         </section>
     );
 }

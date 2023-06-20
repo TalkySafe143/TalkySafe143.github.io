@@ -4,14 +4,13 @@ export default function About() {
             <h1>About me</h1>
             <div className="about-item about-me">
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
-                    non dolore facere reiciendis iusto nemo tempore laboriosam
-                    laborum fugit dolorum totam incidunt tempora laudantium
-                    obcaecati natus sit, aspernatur consectetur! Voluptates?
+                    Hello, I'm Sebastian Galindo, a dedicated student pursuing a degree in Systems Engineering at Pontificia Universidad Javeriana. Passionate about technology and driven to excel in the field, I specialize in Backend Development.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                    consectetur quos fugiat fugit! Officiis, temporibus.
+                    As a student, I have gained a solid foundation in Systems Engineering, focusing on software development. I have also had the valuable opportunity to work as a teaching assistant, where I honed my communication and problem-solving skills while assisting students in their coursework. Now, I am eagerly seeking my first professional experience to apply my knowledge and contribute to the industry as a Backend Developer.
+                </p>
+                <p>
+                    With a strong drive for continuous learning, I stay up-to-date with the latest advancements in the field and actively engage in personal projects to further enhance my skills. I am enthusiastic about joining a dynamic team where I can leverage my technical expertise, contribute to innovative solutions, and grow both personally and professionally. I am excited to embark on this next chapter and make a meaningful impact as a Backend Developer.
                 </p>
             </div>
             <div className="col-2">
