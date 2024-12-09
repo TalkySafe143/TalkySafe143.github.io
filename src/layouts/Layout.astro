@@ -1,0 +1,40 @@
+---
+import { Dock } from "./Dock";
+import {ClientRouter } from 'astro:transitions'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title> { Astro.props.title } | Sebastian Galindo</title>
+		<ClientRouter />
+		<script>
+			document.addEventListener('DOMContentLoaded', e=> {
+				const t = document.title.split("|")[0].trim();
+				window.addEventListener('blur', e => {
+					document.title = "Get back! | Sebastian Galindo";
+				})
+				window.addEventListener('focus', e => {
+					document.title = `${t} | Sebastian Galindo`;
+				})
+			})
+		</script>
+	</head>
+	<body>
+	<Dock client:load />
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

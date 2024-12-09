@@ -1,0 +1,56 @@
+---
+import PageTitle from "../../layouts/PageTitle.astro";
+import { FlipWords } from "../ui/flip-words";
+import {MediaBar} from "./MediaBar";
+import GitHub from '@/assets/github.svg'
+import Linkedin from '@/assets/linkedin.svg'
+import Gmail from '@/assets/gmail.svg'
+
+const media : { name: string, image: string, href: string }[] = [
+    {
+        name: 'GitHub',
+        image: GitHub.src,
+        href: "https://github.com/TalkySafe143/"
+    },
+    {
+        name: 'LinkedIn',
+        image: Linkedin.src,
+        href: 'https://www.linkedin.com/in/talkysafe143/'
+    },
+    {
+        name: 'Email',
+        image: Gmail.src,
+        href: 'mailto:sebastian.galindo143@gmail.com'
+    }
+];
+---
+
+<div>
+    <PageTitle>
+        <div slot="primaryTitle">
+            Contact me
+        </div>
+        <div slot="secondaryTitle">
+            Where you can find
+            <span class="text-blue-700">me</span>
+        </div>
+    </PageTitle>
+    <div class="flex flex-col justify-center items-center">
+        <h1 class="font-poppins text-3xl">
+            You can find me in
+        </h1>
+        <FlipWords className="font-poppins text-blue-700 text-2xl" words={
+            media.map(m => m.name)
+        } client:load />
+        <MediaBar items={
+            media.map((m, idx) => {
+                return {
+                    id: idx+1,
+                    name: m.name,
+                    image: m.image,
+                    href: m.href
+                };
+            })
+        } client:load />
+    </div>
+</div>

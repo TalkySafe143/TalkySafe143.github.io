@@ -1,0 +1,12 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import '@/styles/globals.css'
+---
+<Layout title="Not found">
+    <div class="p-20 flex justify-center items-center m-auto h-full w-full flex-col">
+        <h1 class="font-poppins text-4xl text-center">
+            Seems that I don't have your route. &#128549;
+        </h1>
+        <code transition:name="fail" class="p-10">{Astro.url.pathname}</code>
+    </div>
+</Layout>

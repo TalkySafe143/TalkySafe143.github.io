@@ -1,0 +1,18 @@
+---
+import {StickyScrollAbout} from "./StickyScrollAbout";
+import PageTitle from "../../layouts/PageTitle.astro";
+---
+<PageTitle>
+    <div slot="primaryTitle">
+        About me
+    </div>
+    <div slot="secondaryTitle">
+        What about <a
+            href="https://livejaverianaedu-my.sharepoint.com/:b:/g/personal/sfelipe_galindor_javeriana_edu_co/EQEgIGaX-JpBtC3c_WamvJcB4QWdUxhuLIeAzk5nDb1f4w?e=jSxT9r"
+            class="text-blue-700"
+            target="_blank"
+            rel="noopener noreferrer"
+        >me</a>?
+    </div>
+</PageTitle>
+<StickyScrollAbout client:load />

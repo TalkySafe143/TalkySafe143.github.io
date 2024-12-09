@@ -1,0 +1,17 @@
+---
+import PageTitle from "@/layouts/PageTitle.astro";
+import MovingCards from "./MovingCards";
+---
+
+<PageTitle>
+    <div slot="primaryTitle">
+        My Projects
+    </div>
+    <div slot="secondaryTitle">
+        Some self-created <span class="text-blue-700">projects</span>
+    </div>
+</PageTitle>
+<MovingCards client:load />
+<div class="flex flex-col text-center m-6 justify-center items-center ">
+    <h1 class="font-poppins text-2xl max-w-2xl">You can check all of them in my <a class="text-blue-600" href="https://github.com/TalkySafe143" target="_blank">GitHub</a>.</h1>
+</div>

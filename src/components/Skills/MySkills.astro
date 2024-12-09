@@ -1,0 +1,15 @@
+---
+import PageTitle from "@/layouts/PageTitle.astro"
+import {SkillsTimeline} from "./SkillsTimeline";
+---
+<PageTitle>
+    <div slot="primaryTitle">
+        My Skills
+    </div>
+    <div slot="secondaryTitle">
+        What technologies and languages <span class="text-blue-700">I know and have used</span>
+    </div>
+</PageTitle>
+<div class="flex justify-center items-center">
+    <SkillsTimeline client:load />
+</div>
