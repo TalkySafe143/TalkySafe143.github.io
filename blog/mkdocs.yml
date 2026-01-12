@@ -1,5 +1,6 @@
 site_name: Blogsito
 site_url: https://talkysafe143.github.io/blog/
+use_directory_urls: true
 
 theme:
   features:
