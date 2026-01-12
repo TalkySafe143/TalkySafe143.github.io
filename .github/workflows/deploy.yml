@@ -20,19 +20,34 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses:
-          withastro/action@v3
-          # with:
-          # path: . # The root location of your Astro project inside the repository. (optional)
-          # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
-        # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+
+      - name: Bun (Astro)
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Python (MkDocs)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies (Bun)
+        run: bun install --frozen-lockfile
+
+      - name: Build Astro (Bun)
+        run: bun run build
+
       - name: Build MkDocs blog
         run: |
           python -m pip install --upgrade pip
           pip install -r blog/requirements.txt
           cd blog
           mkdocs build --site-dir ../dist/blog
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
 
   deploy:
     needs: build
