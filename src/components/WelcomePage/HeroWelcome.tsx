@@ -3,9 +3,8 @@ import {WelcomeCard} from "@/components/WelcomePage/WelcomeCard.tsx";
 import {TypewriterEffect} from "@/components/ui/typewriter-effect.tsx";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import {Children, type ReactElement, type ReactNode, useEffect} from "react";
+import {useEffect} from "react";
 const typeWriterClassName : string = "font-poppins md:text-4xl text-xl font-semibold"
-import Logo from '@/assets/astro.svg'
 import MyPic1 from '@/assets/me1.jpeg'
 import Contact3D from '@/assets/social-media.svg'
 import Tech from '@/assets/Tech.svg'

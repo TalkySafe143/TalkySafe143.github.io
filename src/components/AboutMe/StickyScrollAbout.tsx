@@ -4,7 +4,6 @@ import Me2 from '@/assets/me2.jpeg'
 import Javeriana from '@/assets/Javeriana.svg'
 import ICPC from '@/assets/ICPC.jpg'
 import ACM from '@/assets/ACM.svg'
-
 const content = [
     {
         title: "General info",

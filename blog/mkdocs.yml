@@ -1,0 +1,51 @@
+site_name: Blogsito
+site_url: https://talkysafe143.github.io/blog/
+
+theme:
+  features:
+    - header.autohide
+  name: material
+  icon:
+    logo: fontawesome/solid/poo
+  font:
+    text: PT Sans
+  palette:
+    - scheme: default
+      primary: black
+      accent: light blue
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - blog:
+      categories_allowed:
+        - Notes
+        - Personal
+  - search
+  - tags
+
+nav:
+  - Home: index.md
+  - Blog:
+    - blog/index.md
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
