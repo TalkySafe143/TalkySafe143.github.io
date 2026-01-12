@@ -4,7 +4,11 @@ use_directory_urls: true
 
 theme:
   features:
+    - navigation.indexes
     - header.autohide
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
   name: material
   icon:
     logo: fontawesome/solid/poo
@@ -15,7 +19,7 @@ theme:
       primary: black
       accent: light blue
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
       primary: blue grey
@@ -26,17 +30,23 @@ theme:
 plugins:
   - blog:
       categories_allowed:
-        - Notes
+        - Notas
         - Personal
   - search
   - tags
 
 nav:
-  - Home: index.md
   - Blog:
-    - blog/index.md
+      - blog/index.md
 
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   - attr_list
   - admonition
   - pymdownx.details
@@ -48,5 +58,9 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
