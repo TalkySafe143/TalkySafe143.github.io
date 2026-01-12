@@ -57,6 +57,25 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
+extra:
+  analytics: 
+    provider: google
+    property: G-NTYT124DXW
+    feedback:
+      title: ¿Esta pagina sivió para algo?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: Obvio
+          data: 1
+          note: >-
+            ¡Gracias por el feedback!
+        - icon: material/emoticon-sad-outline
+          name: Se puede mejorar
+          data: 0
+          note: >- 
+            Gracias, trataré de mejorar esta pagina. 
+            
+
 extra_javascript:
   - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
