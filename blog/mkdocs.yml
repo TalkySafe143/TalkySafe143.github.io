@@ -37,7 +37,7 @@ plugins:
 
 nav:
   - Blog:
-      - blog/index.md
+    - blog/index.md
 
 markdown_extensions:
   - pymdownx.highlight:

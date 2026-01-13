@@ -3,12 +3,13 @@ import ProfileIcon from '@/assets/profileIcon.svg'
 import ProjectsIcon from '@/assets/projectsIcon.svg'
 import TechsIcon from '@/assets/linux.svg'
 import ContactIcon from '@/assets/contact.svg'
+import BlogIcon from '@/assets/blog.svg'
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {Image} from "astro:assets";
 
-export function Dock() {
-    const sz = 1000;
-    const links = [
+const sz = 1000;
+
+const links = [
         {
             title: "Home",
             icon: (
@@ -30,7 +31,7 @@ export function Dock() {
                     alt="Profile Logo"
                 />
             ),
-            href: "/about",
+            href: "/about/",
         },
         {
             title: "Projects",
@@ -42,7 +43,7 @@ export function Dock() {
                     alt="Projects Logo"
                 />
             ),
-            href: "/projects",
+            href: "/projects/",
         },
         {
             title: "Technologies",
@@ -54,7 +55,7 @@ export function Dock() {
                     alt="Linux Logo"
                 />
             ),
-            href: "/skills",
+            href: "/skills/",
         },
         {
             title: "Contact",
@@ -66,9 +67,24 @@ export function Dock() {
                     alt="Contact Logo"
                 />
             ),
-            href: "/contact",
+            href: "/contact/",
+        },
+        {
+            title: "Blog",
+            icon: (
+                <img
+                    src={BlogIcon.src}
+                    width={sz}
+                    height={sz}
+                    alt="Blog Logo"
+                />
+            ),
+            href: "/blog/blog/"
         }
     ];
+
+export function Dock() {
+    
     return (
         <div className="fixed bottom-0 md:m-10 mb-5 z-20">
             <FloatingDock
