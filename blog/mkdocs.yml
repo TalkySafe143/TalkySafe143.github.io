@@ -28,16 +28,22 @@ theme:
         name: Switch to light mode
 
 plugins:
-  - blog:
-      categories_allowed:
-        - Notas
-        - Personal
   - search
+  - awesome-nav
   - tags
+  - i18n:
+      languages:
+        - locale: es
+          default: true
+          name: Español
+          build: true
+        - locale: en
+          name: English
+          build: true
+  
 
 nav:
-  - Blog:
-      - blog/index.md
+  - Blog: blog/
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -77,9 +83,9 @@ extra:
             
 
 extra_javascript:
-  - javascripts/katex.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+- javascripts/katex.js
+- https://unpkg.com/katex@0/dist/katex.min.js
+- https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 extra_css:
-  - https://unpkg.com/katex@0/dist/katex.min.css
+- https://unpkg.com/katex@0/dist/katex.min.css

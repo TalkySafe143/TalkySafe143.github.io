@@ -2,8 +2,6 @@
 date:
   created: 2026-01-12
 draft: false
-categories:
-  - Notas
 tags:
   - Programacion competitiva
   - Matematica
